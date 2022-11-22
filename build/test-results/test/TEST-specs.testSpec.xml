@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="specs.testSpec" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-11-22T09:16:40" hostname="SP1129" time="40.163">
+  <properties/>
+  <testcase name="Open Sportsbet page" classname="specs.testSpec" time="40.163">
+    <failure message="Condition failed with Exception:&#10;&#10;waitFor { sportsbetHomePage.racecardButton1.displayed }&#10;|&#10;geb.waiting.WaitTimeoutException: condition did not pass in 30.0 seconds (failed with exception)&#10;&#9;at geb.waiting.Wait.waitFor(Wait.groovy:138)&#10;&#9;at geb.waiting.DefaultWaitingSupport.doWaitFor(DefaultWaitingSupport.groovy:51)&#10;&#9;at geb.waiting.DefaultWaitingSupport.waitFor(DefaultWaitingSupport.groovy:38)&#10;&#9;at geb.Page.waitFor(Page.groovy:535)&#10;&#9;at geb.Browser.methodMissing(Browser.groovy:209)&#10;&#9;at geb.spock.GebSpec.methodMissing(GebSpec.groovy:56)&#10;&#9;at specs.testSpec.Open Sportsbet page(testSpec.groovy:27)&#10;Caused by: geb.waiting.WaitTimeoutException: condition did not pass in 30.0 seconds (failed with exception)&#10;&#9;at geb.waiting.Wait.waitFor(Wait.groovy:138)&#10;&#9;at geb.content.PageContentTemplate.create(PageContentTemplate.groovy:74)&#10;&#9;at geb.content.PageContentTemplate.get(PageContentTemplate.groovy:54)&#10;&#9;at geb.content.DefaultPageContentSupport.getContent(DefaultPageContentSupport.groovy:42)&#10;&#9;at geb.content.PageContentSupport.propertyMissing(PageContentSupport.groovy:39)&#10;&#9;at geb.Page.propertyMissing(Page.groovy:112)&#10;&#9;at specs.testSpec.Open Sportsbet page_closure2(testSpec.groovy:27)&#10;&#9;at geb.waiting.Wait.waitFor(Wait.groovy:117)&#10;&#9;... 6 more&#10;Caused by: Assertion failed: &#10; &#10;$(&quot;div[class='outcomeDetails_fgw55bl']&quot;,0).find(&quot;span[data-automation-id='price-text']&quot;,0)&#10;|                                          |&#10;|                                          []&#10;[[[ChromeDriver: chrome on WINDOWS (e918037df26389d9ddd41a50a6e4058f)] -&gt; css selector: div[class='outcomeDetails_fgw55bl']]]&#10; &#10;&#9;at pages.SportsbetHomePage._clinit__closure5$_closure8(SportsbetHomePage.groovy:13)&#10;&#9;at geb.content.PageContentTemplate.invokeFactory(PageContentTemplate.groovy:97)&#10;&#9;at geb.content.PageContentTemplate.create_closure1(PageContentTemplate.groovy:59)&#10;&#9;at geb.waiting.Wait.waitFor(Wait.groovy:127)&#10;&#9;... 13 more&#10;" type="org.spockframework.runtime.ConditionFailedWithExceptionError">Condition failed with Exception:
+
+waitFor { sportsbetHomePage.racecardButton1.displayed }
+|
+geb.waiting.WaitTimeoutException: condition did not pass in 30.0 seconds (failed with exception)
+	at geb.waiting.Wait.waitFor(Wait.groovy:138)
+	at geb.waiting.DefaultWaitingSupport.doWaitFor(DefaultWaitingSupport.groovy:51)
+	at geb.waiting.DefaultWaitingSupport.waitFor(DefaultWaitingSupport.groovy:38)
+	at geb.Page.waitFor(Page.groovy:535)
+	at geb.Browser.methodMissing(Browser.groovy:209)
+	at geb.spock.GebSpec.methodMissing(GebSpec.groovy:56)
+	at specs.testSpec.Open Sportsbet page(testSpec.groovy:27)
+Caused by: geb.waiting.WaitTimeoutException: condition did not pass in 30.0 seconds (failed with exception)
+	at geb.waiting.Wait.waitFor(Wait.groovy:138)
+	at geb.content.PageContentTemplate.create(PageContentTemplate.groovy:74)
+	at geb.content.PageContentTemplate.get(PageContentTemplate.groovy:54)
+	at geb.content.DefaultPageContentSupport.getContent(DefaultPageContentSupport.groovy:42)
+	at geb.content.PageContentSupport.propertyMissing(PageContentSupport.groovy:39)
+	at geb.Page.propertyMissing(Page.groovy:112)
+	at specs.testSpec.Open Sportsbet page_closure2(testSpec.groovy:27)
+	at geb.waiting.Wait.waitFor(Wait.groovy:117)
+	... 6 more
+Caused by: Assertion failed: 
+ 
+$(&quot;div[class='outcomeDetails_fgw55bl']&quot;,0).find(&quot;span[data-automation-id='price-text']&quot;,0)
+|                                          |
+|                                          []
+[[[ChromeDriver: chrome on WINDOWS (e918037df26389d9ddd41a50a6e4058f)] -&gt; css selector: div[class='outcomeDetails_fgw55bl']]]
+ 
+	at pages.SportsbetHomePage._clinit__closure5$_closure8(SportsbetHomePage.groovy:13)
+	at geb.content.PageContentTemplate.invokeFactory(PageContentTemplate.groovy:97)
+	at geb.content.PageContentTemplate.create_closure1(PageContentTemplate.groovy:59)
+	at geb.waiting.Wait.waitFor(Wait.groovy:127)
+	... 13 more
+
+	at specs.testSpec.Open Sportsbet page(testSpec.groovy:27)
+Caused by: geb.waiting.WaitTimeoutException: condition did not pass in 30.0 seconds (failed with exception)
+	at geb.waiting.Wait.waitFor(Wait.groovy:138)
+	at geb.waiting.DefaultWaitingSupport.doWaitFor(DefaultWaitingSupport.groovy:51)
+	at geb.waiting.DefaultWaitingSupport.waitFor(DefaultWaitingSupport.groovy:38)
+	at geb.Page.waitFor(Page.groovy:535)
+	at geb.Browser.methodMissing(Browser.groovy:209)
+	at geb.spock.GebSpec.methodMissing(GebSpec.groovy:56)
+	... 1 more
+Caused by: geb.waiting.WaitTimeoutException: condition did not pass in 30.0 seconds (failed with exception)
+	at geb.waiting.Wait.waitFor(Wait.groovy:138)
+	at geb.content.PageContentTemplate.create(PageContentTemplate.groovy:74)
+	at geb.content.PageContentTemplate.get(PageContentTemplate.groovy:54)
+	at geb.content.DefaultPageContentSupport.getContent(DefaultPageContentSupport.groovy:42)
+	at geb.content.PageContentSupport.propertyMissing(PageContentSupport.groovy:39)
+	at geb.Page.propertyMissing(Page.groovy:112)
+	at specs.testSpec.Open Sportsbet page_closure2(testSpec.groovy:27)
+	at geb.waiting.Wait.waitFor(Wait.groovy:117)
+	... 6 more
+Caused by: Assertion failed: 
+
+$(&quot;div[class='outcomeDetails_fgw55bl']&quot;,0).find(&quot;span[data-automation-id='price-text']&quot;,0)
+|                                          |
+|                                          []
+[[[ChromeDriver: chrome on WINDOWS (e918037df26389d9ddd41a50a6e4058f)] -&gt; css selector: div[class='outcomeDetails_fgw55bl']]]
+
+	at pages.SportsbetHomePage._clinit__closure5$_closure8(SportsbetHomePage.groovy:13)
+	at geb.content.PageContentTemplate.invokeFactory(PageContentTemplate.groovy:97)
+	at geb.content.PageContentTemplate.create_closure1(PageContentTemplate.groovy:59)
+	at geb.waiting.Wait.waitFor(Wait.groovy:127)
+	... 13 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 54962
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Nov 22, 2022 8:16:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
