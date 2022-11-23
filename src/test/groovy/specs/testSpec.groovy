@@ -15,7 +15,7 @@ class testSpec extends GebReportingSpec {
         SportsbetHomePage sportsbetHomePage = to SportsbetHomePage
 
         then:'Wait for Sportsbet page is loaded completely'
-          waitFor { sportsbetHomePage.sportsBetLogo.displayed }
+        waitFor { sportsbetHomePage.sportsBetLogo.displayed }
 
         when: 'user clicks on Next to jump -> first card '
         waitFor {sportsbetHomePage.firstRace.isDisplayed()}
@@ -25,7 +25,6 @@ class testSpec extends GebReportingSpec {
         waitFor { sportsbetHomePage.racecardButton1.displayed }
         sportsbetHomePage.racecardButton1.click()
 
-
         waitFor {sportsbetHomePage.betSlipHideButton.displayed }
         if (sportsbetHomePage.betSlipHideButton.isDisplayed()) {
             sportsbetHomePage.betSlipHideButton.click()
@@ -33,16 +32,14 @@ class testSpec extends GebReportingSpec {
 
         when: 'user makes the second bet'
         waitFor { sportsbetHomePage.racecardButton2.displayed }
-        sportsbetHomePage.racecardButton2.click()
+        sportsbetHomePage.racecardButton1.click()
 
         then: 'make sure the bets made are correct'
+        waitFor { sportsbetHomePage.betSlipButton.displayed }
+        sportsbetHomePage.betSlipButton.click()
 
-            waitFor { sportsbetHomePage.betSlipButton.displayed }
-            sportsbetHomePage.betSlipButton.click()
-
-            assertThat(sportsbetHomePage.betName1, is(equalTo(sportsbetHomePage.betSlipBetName1)))
-            assertThat(sportsbetHomePage.betName2, is(equalTo(sportsbetHomePage.betSlipBetName2)))
-
+        and: 'verify names in betSlip'
+        sportsbetHomePage.verifyBets()
     }
 
 }

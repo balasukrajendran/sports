@@ -1,7 +1,11 @@
 package pages
 
 import geb.Page
-import geb.navigator.Navigator
+
+import static org.hamcrest.Matchers.equalTo
+
+import static org.hamcrest.Matchers.is
+import static org.junit.Assert.assertThat
 
 class SportsbetHomePage extends Page {
     static at = { sportsBetLogo.displayed }
@@ -20,21 +24,11 @@ class SportsbetHomePage extends Page {
         betSlipBetName1 (wait:true) { $("span[data-automation-id='betslip-bet-title']",0).text()}
         betSlipBetName2 (wait:true) { $("span[data-automation-id='betslip-bet-title']",1).text()}
         supportMenu { $(id:'menu-item-3367') }
-
     }
 
-    def navigateToMenu(Navigator menu) {
-        waitFor(30) { menu.displayed }
-        interact {
-            moveToElement(menu)
-        }
-        true
-    }
-
-    def navigateToSubmenu(Navigator submenu) {
-        waitFor(30) { submenu.displayed }
-        submenu.click()
-        true
+    public void verifyBets() {
+        assertThat(betName1,is(betSlipBetName1))
+        assertThat(betName2,is(betSlipBetName2))
     }
 
 }
