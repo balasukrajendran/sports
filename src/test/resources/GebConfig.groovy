@@ -1,4 +1,5 @@
 
+import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
@@ -20,7 +21,7 @@ environments {
         if (System.properties.get("headless").toString().equalsIgnoreCase("true")) {
             options.addArguments("--headless")
         }
-      /
+      //  new ChromeDriver(options)
         driver = {new ChromeDriver(options)}
 
     }
